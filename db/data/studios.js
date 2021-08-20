@@ -18,7 +18,7 @@ export default [{
     latitude: -118.36007573786542, 
   },
   size: 2,
-  equipiment: {
+  equipment: {
     guitars: true,
     drums: true,
     synthesizers: true,
@@ -62,7 +62,7 @@ export default [{
     latitude: -0.12344564769438607, 
   },
   size: 1,
-  equipiment: {
+  equipment: {
     guitars: false,
     drums: false,
     synthesizers: true,
