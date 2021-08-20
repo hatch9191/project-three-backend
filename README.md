@@ -2,14 +2,9 @@
 
 * `npm install` - Install dependencies
 * `npm run dev` - Run the app in development mode
-
-
+CHRISTIAN
+EGGS
 Eoin Barr
-Christian Baker
-Harry Evans 
-
-What's our team name going to be?
-
-airstudio 🤷‍♂️
-That's an idea for the app name ^
-Is our app and team name the same?
+CHRISTIAN
+Eoin Barr
+CHRISTIAN
