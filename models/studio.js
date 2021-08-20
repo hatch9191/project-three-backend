@@ -61,11 +61,11 @@ studioSchema
     }, 0) / this.comments.length
   })
 
-studioSchema
-  .virtual('totalBookedBy')
-  .get(function () {
-    return this.bookedBy.length
-  })
+// studioSchema
+//   .virtual('totalBookedBy')
+//   .get(function () {
+//     return this.bookedBy.length
+//   })
 
 studioSchema.set('toJSON', { virtuals: true })
 

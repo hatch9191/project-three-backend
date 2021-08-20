@@ -21,7 +21,7 @@ async function studioShow(req, res, next) {
       .populate('addedBy')
       .populate('favouritedBy')
       .populate('comments.addedBy')
-      .populate('bookings.bookedBy')
+    // .populate('bookings')
 
     if (!studio) throw new NotFound()
     return res.status(200).json(studio)

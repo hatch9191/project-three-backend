@@ -9,10 +9,9 @@ async function studioCommentCreate(req, res, next) {
   try {
     const commentedStudio = await Studio.findById(studioId)
     if (!commentedStudio) throw new NotFound()
-    
+
     const createdComment = commentedStudio.comments.create({ ...req.body, addedBy: currentUser })
     commentedStudio.comments.push(createdComment)
-    await commentedStudio.push(createdComment)
     await commentedStudio.save()
     return res.status(201).json(createdComment)
   } catch (err) {
@@ -29,6 +28,7 @@ async function studioCommentDelete(req, res, next) {
     const studio = await Studio.findById(studioId)
     if (!studio) throw new NotFound()
     const commentToDelete = studio.comments.id(commentId)
+    console.log(commentToDelete)
     if (!commentToDelete) throw new NotFound()
 
     if (!commentToDelete.addedBy.equals(currentUserId)) {

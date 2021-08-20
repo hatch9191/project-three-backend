@@ -19,13 +19,13 @@ router.route('/studios/:studioId')
 router.route('/studios/:studioId/comments')
   .post(secureRoute, studioComment.commentCreate)
 
-router.route('studios/:studioId/comments/:commentId')
+router.route('/studios/:studioId/comments/:commentId')
   .delete(secureRoute, studioComment.commentDelete)
 
-router.route('studios/:studioId/favourites')
+router.route('/studios/:studioId/favourites')
   .post(secureRoute, studioBooking.favourite)
 
-router.route('studios/:studioId/bookings')
+router.route('/studios/:studioId/bookings')
   .post(secureRoute, studioBooking.booked)
 
 router.post('/register', auth.register)
