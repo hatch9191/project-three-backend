@@ -1,5 +1,6 @@
 import Studio from '../models/studio.js'
 import { connectDb, disconnectDb, truncateDb } from './helpers.js'
+import studioData from './data/studios.js'
 
 async function seed() {
   try {
