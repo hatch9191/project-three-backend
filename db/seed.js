@@ -20,7 +20,7 @@ async function seed() {
       isAdmin: true,
     })
 
-    console.log('🤖 Amin user created')
+    console.log('🤖 Admin user created')
 
     studioData.forEach(studio => {
       studio.addedBy = user

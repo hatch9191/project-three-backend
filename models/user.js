@@ -2,13 +2,6 @@ import mongoose from 'mongoose'
 import mongooseUniqueValidator from 'mongoose-unique-validator'
 import bcrypt from 'bcrypt'
 
-// const bookingSchema = new mongoose.Schema(
-//   {
-//     studio: { type: String, required: true },
-//     dates: { type: String, required: true },
-//   }
-// )
-
 const userSchema = new mongoose.Schema({
   username: { type: String, unique: true, minlength: 1, maxlength: 10, required: true },
   email: { type: String, unique: true, required: true },
@@ -60,24 +53,40 @@ userSchema
 
 userSchema
   .virtual('bookedStudio', {
-    ref: 'Booking',
+    ref: 'Studio',
     localField: '_id',
-    foreignField: 'bookedBy',
+    foreignField: 'bookings.bookedBy',
   })
   .get(function (bookedStudio) {
     if (!bookedStudio) return
 
+    
+
     return bookedStudio.map(studio => {
+
       return {
-        _id: studio._id,
+        studioId: studio._id,
         name: studio.name,
         mainImage: studio.mainImage,
         town: studio.location.town,
         country: studio.location.country,
+        // bookedFrom: studio.bookings.bookedFrom,
+        // bookedTo: studio.bookings.bookedTo,
+        bookings: studio.bookings,
       }
     })
   })
 
+// userSchema
+//   .virtual('specificBookedStudio', {
+//     ref: 'User',
+//     localField: '_id',
+//     foreignField: 'bookedStudio.bookedBy',
+//   })
+//   .get(function (specificBookedStudio) {
+//     if (!specificBookedStudio) return
+//     return specificBookedStudio
+//   })
 
 userSchema.set('toJSON', {
   virtuals: true,
@@ -114,8 +123,6 @@ userSchema
 userSchema.methods.validatePassword = function (password) {
   return bcrypt.compareSync(password, this.password)
 }
-
-
 
 userSchema.plugin(mongooseUniqueValidator)
 

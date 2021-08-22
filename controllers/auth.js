@@ -1,4 +1,4 @@
-import { Unauthorized } from '../lib/errors.js'
+import { Unauthorized, NotFound } from '../lib/errors.js'
 import User from '../models/user.js'
 import { secret } from '../config/environment.js'
 import jwt from 'jsonwebtoken'
@@ -33,4 +33,18 @@ async function login(req, res, next) {
   }
 }
 
-export default { register, login }
+async function profile(req, res, next) {
+  const { currentUserId } = req
+  try {
+    const user = await User.findById(currentUserId)
+      .populate('favouritedStudio')
+      .populate('addedStudio')
+      .populate('bookedStudio')
+    if (!user) throw new NotFound()
+    return res.status(200).json(user)
+  } catch (err) {
+    next(err)
+  }
+}
+
+export default { register, login, profile }

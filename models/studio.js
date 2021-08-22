@@ -13,6 +13,16 @@ const commentSchema = new mongoose.Schema(
   }
 )
 
+const bookingSchema = new mongoose.Schema(
+  {
+    bookedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+    bookedFrom: { type: String, required: true },
+    bookedTo: { type: String, required: true },
+  },
+  {
+    timestamps: true,
+  }
+)
 
 const studioSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
@@ -46,7 +56,7 @@ const studioSchema = new mongoose.Schema({
     image: { type: String, required: false },
   }],
   availability: [{ type: String, required: false }],
-  bookings: [{ type: mongoose.Schema.ObjectId, ref: 'Booking', required: true }],
+  bookings: [bookingSchema],
   addedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   favouritedBy: [{ type: mongoose.Schema.ObjectId, ref: 'User', required: true }],
   comments: [commentSchema],

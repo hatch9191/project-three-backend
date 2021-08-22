@@ -28,11 +28,15 @@ router.route('/studios/:studioId/favourites')
 router.route('/studios/:studioId/bookings')
   .post(secureRoute, studioBooking.booked)
 
+router.route('/studios/:studioId/bookings/:bookingId')
+  .delete(secureRoute, studioBooking.cancelled)
+
+
 router.post('/register', auth.register)
 router.post('/login', auth.login)
 
-// router.route('/profile')
-//   .get(secureRoute, auth.profile)
+router.route('/profile')
+  .get(secureRoute, auth.profile)
 
 // LOGIN, REGISTER AND PROFILE TODO
 
