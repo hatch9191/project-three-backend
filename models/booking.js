@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import mongooseUniqueValidator from 'mongoose-unique-validator'
 
 const bookingSchema = new mongoose.Schema(
   {
@@ -10,6 +11,10 @@ const bookingSchema = new mongoose.Schema(
     timestamps: true,
   }
 )
+
+bookingSchema.set('toJSON', { virtuals: true })
+
+bookingSchema.plugin(mongooseUniqueValidator)
 
 const Booking = mongoose.model('Booking', bookingSchema)
 

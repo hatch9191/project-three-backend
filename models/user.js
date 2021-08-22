@@ -38,7 +38,7 @@ userSchema
 
 userSchema
   .virtual('addedStudio', {
-    re: 'Studio',
+    ref: 'Studio',
     localField: '_id',
     foreignField: 'addedBy',
   })
@@ -60,7 +60,7 @@ userSchema
 
 userSchema
   .virtual('bookedStudio', {
-    re: 'Booking',
+    ref: 'Booking',
     localField: '_id',
     foreignField: 'bookedBy',
   })
@@ -114,6 +114,8 @@ userSchema
 userSchema.methods.validatePassword = function (password) {
   return bcrypt.compareSync(password, this.password)
 }
+
+
 
 userSchema.plugin(mongooseUniqueValidator)
 
