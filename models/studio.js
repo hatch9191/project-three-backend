@@ -48,7 +48,7 @@ const studioSchema = new mongoose.Schema({
     mixingDesk: { type: Boolean, required: true },
   },
   rate: { type: Number, required: true, min: 1, max: 3 },
-  accomodation: { type: Boolean, required: true },
+  accommodation: { type: Boolean, required: true },
   noOfStudios: { type: Number, required: true, min: 1 },
   genres: [{ type: String, required: true }],
   previousClients: [{

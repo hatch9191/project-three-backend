@@ -26,7 +26,7 @@ export default [{
     mixingDesk: true,
   },
   rate: 2,
-  accomodation: false,
+  accommodation: false,
   noOfStudios: 3,
   genres: ['Hip-Hop', 'Rock', 'Country'],
   previousClients: [{
@@ -70,7 +70,7 @@ export default [{
     mixingDesk: true,
   },
   rate: 1,
-  accomodation: false,
+  accommodation: false,
   noOfStudios: 1,
   genres: ['Soundtrack', 'Pop'],
   previousClients: [{
@@ -80,5 +80,47 @@ export default [{
   {
     name: 'Christian Henson',
     image: 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629318374/sei_project_3_studio_images/Christian_Henson_krqqlq.jpg',
+  }],
+},
+{
+  name: 'Black Rock',
+  description: `Black Rock holds the key to a world you thought you'd only ever dream of working in. Its sumptuous accommodation, breathtaking surroundings and exquisite studio together embody everything which recording artists desire: complete luxury and bliss combined with top-end studio facilities - the ultimate combination for any creative project. Guests will have the sole pleasure of a stunning 3-storey 6-bedroom Cycladic villa, boasting many tranquil living areas, a luscious pool and Jacuzzi, several outdoor terraces and of course a pristine SSL room with J-series console and Genelec monitoring.
+
+  Sitting high on Santorini's incredible volcanic landscape and immersed by panoramic views of the sea, neighbouring islands, beautiful historic settlements and spectacular Aegean sunsets, Black Rock sets a supreme new standard for residential studios. A phenomenal recording destination, it provides clients with a creative experience like no other.`,
+  mainImage: 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629640953/sei_project_3_studio_images/black_rock_zooof4.jpg',
+  extraImages: ['https://res.cloudinary.com/dn11uqgux/image/upload/v1629650879/sei_project_3_studio_images/black_rock2_miqygy.jpg', 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629650960/sei_project_3_studio_images/black_rock3_wlu6bx.jpg'],
+  location: {
+    addressLineOne: 'Black Rock Studios',
+    addressLineTwo: 'Akrotiri',
+    postCode: '84700',
+    town: 'Santorini',
+    country: 'Greece',
+    continent: 'Europe',
+    longitude: 36.36429930564408, 
+    latitude: 25.37882501492401, 
+  },
+  size: 2,
+  equipment: {
+    guitars: true,
+    drums: true,
+    synthesizers: true,
+    microphones: true,
+    mixingDesk: true,
+  },
+  rate: 3,
+  accommodation: true,
+  noOfStudios: 2,
+  genres: ['Rock', 'Pop', 'House'],
+  previousClients: [{
+    name: 'Bring Me The Horizon',
+    image: 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629651608/sei_project_3_studio_images/BringMeTheHorizon_li3aym.webp',
+  }, 
+  {
+    name: 'Justin Bieber',
+    image: 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629651609/sei_project_3_studio_images/JustinBieber_kkqigl.webp',
+  },
+  {
+    name: 'One Republic',
+    image: 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629651609/sei_project_3_studio_images/OneRepublic_hlkkly.png',
   }],
 }]
