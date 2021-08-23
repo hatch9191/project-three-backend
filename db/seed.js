@@ -18,6 +18,7 @@ async function seed() {
       passwordConfirmation: 'pass',
       avatar: 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629317752/sei_project_3_studio_images/Xzibit_tljwir.jpg',
       isAdmin: true,
+      acceptTerms: true,
     })
 
     console.log('🤖 Admin user created')
