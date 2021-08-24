@@ -18,6 +18,7 @@ const bookingSchema = new mongoose.Schema(
     bookedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
     bookedFrom: { type: String, required: true },
     bookedTo: { type: String, required: true },
+    studioId: { type: mongoose.Schema.ObjectId, ref: 'Studio' },
   },
   {
     timestamps: true,

@@ -33,7 +33,7 @@ async function login(req, res, next) {
   }
 }
 
-async function profile(req, res, next) {
+async function profileShow(req, res, next) {
   const { currentUserId } = req
   try {
     const user = await User.findById(currentUserId)
@@ -47,4 +47,18 @@ async function profile(req, res, next) {
   }
 }
 
-export default { register, login, profile }
+async function profileUpdate(req, res, next) {
+  const { currentUserId } = req
+  try {
+    const userToEdit = await User.findById(currentUserId)
+    if (!currentUserId) throw new NotFound()
+
+    Object.assign(userToEdit, req.body)
+    await userToEdit.save()
+    return res.status(202).json(userToEdit)
+  } catch (err) {
+    next(err)
+  }
+}
+
+export default { register, login, profileShow, profileUpdate }

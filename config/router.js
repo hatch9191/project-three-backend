@@ -36,7 +36,10 @@ router.post('/register', auth.register)
 router.post('/login', auth.login)
 
 router.route('/profile')
-  .get(secureRoute, auth.profile)
+  .get(secureRoute, auth.profileShow)
+
+router.route('/profile/:userId')
+  .put(secureRoute, auth.profileUpdate)
 
 // LOGIN, REGISTER AND PROFILE TODO
 
