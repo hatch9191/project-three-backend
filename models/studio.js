@@ -18,6 +18,7 @@ const bookingSchema = new mongoose.Schema(
     bookedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
     bookedFrom: { type: String, required: true },
     bookedTo: { type: String, required: true },
+    studioId: { type: mongoose.Schema.ObjectId, ref: 'Studio' },
   },
   {
     timestamps: true,
@@ -48,7 +49,7 @@ const studioSchema = new mongoose.Schema({
     mixingDesk: { type: Boolean, required: true },
   },
   rate: { type: Number, required: true, min: 1, max: 3 },
-  accomodation: { type: Boolean, required: true },
+  accommodation: { type: Boolean, required: true },
   noOfStudios: { type: Number, required: true, min: 1 },
   genres: [{ type: String, required: true }],
   previousClients: [{

@@ -4,8 +4,12 @@ import bcrypt from 'bcrypt'
 
 const userSchema = new mongoose.Schema({
   username: { type: String, unique: true, minlength: 1, maxlength: 10, required: true },
+  firstName: { type: String, required: false },
+  lastName: { type: String, required: false },
   email: { type: String, unique: true, required: true },
   password: { type: String, minlength: 1, required: true },
+  avatar: { type: String, required: false },
+  acceptTerms: { type: Boolean, required: true },
   isAdmin: { type: Boolean, required: false, default: false },
 })
 
@@ -23,7 +27,9 @@ userSchema
         _id: studio._id,
         name: studio.name,
         mainImage: studio.mainImage,
-        town: studio.location.town,
+        location: {
+          town: studio.location.town,
+        },
         country: studio.location.country,
       }
     })
@@ -43,7 +49,9 @@ userSchema
         _id: studio._id,
         name: studio.name,
         mainImage: studio.mainImage,
-        town: studio.location.town,
+        location: {
+          town: studio.location.town,
+        },
         country: studio.location.country,
       }
     })
@@ -68,7 +76,9 @@ userSchema
         studioId: studio._id,
         name: studio.name,
         mainImage: studio.mainImage,
-        town: studio.location.town,
+        location: {
+          town: studio.location.town,
+        },
         country: studio.location.country,
         // bookedFrom: studio.bookings.bookedFrom,
         // bookedTo: studio.bookings.bookedTo,
