@@ -29,7 +29,8 @@ const studioSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
   description: { type: String, required: true, maxlength: 1000 },
   mainImage: { type: String, required: true },
-  extraImages: [{ type: String, require: false }],
+  altImageOne: { type: String, require: false },
+  altImageTwo: { type: String, require: false },
   location: {
     addressLineOne: { type: String, required: true },
     addressLineTwo: { type: String, required: false },
@@ -52,10 +53,14 @@ const studioSchema = new mongoose.Schema({
   accommodation: { type: Boolean, required: true },
   noOfStudios: { type: Number, required: true, min: 1 },
   genres: [{ type: String, required: true }],
-  previousClients: [{
+  previousClientsOne: {
     name: { type: String, required: false },
     image: { type: String, required: false },
-  }],
+  },
+  previousClientsTwo: {
+    name: { type: String, required: false },
+    image: { type: String, required: false },
+  },
   availability: [{ type: String, required: false }],
   bookings: [bookingSchema],
   addedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
