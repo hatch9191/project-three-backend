@@ -1,10 +1,7 @@
+/* eslint-disable quotes */
 export default [{
   name: 'Clear Lake Recording Studios',
-  description: `Clear Lake Recording Studios is a world-class facility designed to meet the needs of major label projects, while remaining accessible and affordable to independent artists.
-    
-  The recording studio supplies professional engineering and production services for projects of any scale, exceptionally well-tuned live and control rooms, a Trident 80B console supporting an impressive array of vintage microphones and outboard equipment plus quality instruments ranging from a Yamaha C7 grand piano to a Hammond B-3 Organ and Leslie 122 amp.
-  
-  The goal at Clear Lake is to offer a creative environment, high-end equipment and a skilled staff. You will get the kind of recording expected of any top Los Angeles recording studio.`,
+  description: ["Clear Lake Recording Studios is a world-class facility designed to meet the needs of major label projects, while remaining accessible and affordable to independent artists.", "The recording studio supplies professional engineering and production services for projects of any scale, exceptionally well-tuned live and control rooms, a Trident 80B console supporting an impressive array of vintage microphones and outboard equipment plus quality instruments ranging from a Yamaha C7 grand piano to a Hammond B-3 Organ and Leslie 122 amp.", "The goal at Clear Lake is to offer a creative environment, high-end equipment and a skilled staff. You will get the kind of recording expected of any top Los Angeles recording studio."],
   mainImage: 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629317009/sei_project_3_studio_images/clear_lake1_pmw5do.jpg',
   extraImages: ['https://res.cloudinary.com/dn11uqgux/image/upload/v1629317009/sei_project_3_studio_images/clear_lake2_yorpyu.jpg', 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629317009/sei_project_3_studio_images/clear_lake3_fbnrud.jpg'],
   location: {
@@ -44,11 +41,7 @@ export default [{
 },
 {
   name: 'Soho Sound Kitchen',
-  description: `Soho Sound Kitchen is a brand new 5.1 studio in King's Cross, London.
-  
-  The studio was designed and built by Munro Acoustics. It has a control room which features an SSL E-4044 console, Adam 5.1 Surround Sound Monitoring and a comprehensively loaded 48 channel Pro Tools 10 HDX system. The room also boasts an extensive array of top of the range outboard equipment.
-  
-  For recording purposes there is a dedicated live room with an extensive selection of state-of-the-art microphones.`,
+  description: ["Soho Sound Kitchen is a brand new 5.1 studio in King's Cross, London.", "The studio was designed and built by Munro Acoustics. It has a control room which features an SSL E-4044 console, Adam 5.1 Surround Sound Monitoring and a comprehensively loaded 48 channel Pro Tools 10 HDX system. The room also boasts an extensive array of top of the range outboard equipment.", "For recording purposes there is a dedicated live room with an extensive selection of state-of-the-art microphones."],
   mainImage: 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629318048/sei_project_3_studio_images/soho_sound_kitchen_hctr4f.jpg',
   extraImages: ['https://res.cloudinary.com/dn11uqgux/image/upload/v1629318135/sei_project_3_studio_images/soho_sound_kitchen2_gcck9l.jpg', 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629318135/sei_project_3_studio_images/soho_sound_kitchen3_vckepb.jpg'],
   location: {
@@ -84,9 +77,8 @@ export default [{
 },
 {
   name: 'Black Rock',
-  description: `Black Rock holds the key to a world you thought you'd only ever dream of working in. Its sumptuous accommodation, breathtaking surroundings and exquisite studio together embody everything which recording artists desire: complete luxury and bliss combined with top-end studio facilities - the ultimate combination for any creative project. Guests will have the sole pleasure of a stunning 3-storey 6-bedroom Cycladic villa, boasting many tranquil living areas, a luscious pool and Jacuzzi, several outdoor terraces and of course a pristine SSL room with J-series console and Genelec monitoring.
-
-  Sitting high on Santorini's incredible volcanic landscape and immersed by panoramic views of the sea, neighbouring islands, beautiful historic settlements and spectacular Aegean sunsets, Black Rock sets a supreme new standard for residential studios. A phenomenal recording destination, it provides clients with a creative experience like no other.`,
+  // eslint-disable-next-line quotes
+  description: ["Black Rock holds the key to a world you thought you'd only ever dream of working in. Its sumptuous accommodation, breathtaking surroundings and exquisite studio together embody everything which recording artists desire: complete luxury and bliss combined with top-end studio facilities - the ultimate combination for any creative project. Guests will have the sole pleasure of a stunning 3-storey 6-bedroom Cycladic villa, boasting many tranquil living areas, a luscious pool and Jacuzzi, several outdoor terraces and of course a pristine SSL room with J-series console and Genelec monitoring.", "Sitting high on Santorini's incredible volcanic landscape and immersed by panoramic views of the sea, neighbouring islands, beautiful historic settlements and spectacular Aegean sunsets, Black Rock sets a supreme new standard for residential studios. A phenomenal recording destination, it provides clients with a creative experience like no other."],
   mainImage: 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629640953/sei_project_3_studio_images/black_rock_zooof4.jpg',
   extraImages: ['https://res.cloudinary.com/dn11uqgux/image/upload/v1629650879/sei_project_3_studio_images/black_rock2_miqygy.jpg', 'https://res.cloudinary.com/dn11uqgux/image/upload/v1629650960/sei_project_3_studio_images/black_rock3_wlu6bx.jpg'],
   location: {

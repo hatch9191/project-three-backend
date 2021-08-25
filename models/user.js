@@ -35,6 +35,12 @@ userSchema
     })
   })
 
+// favouritedBy: studio.favouritedBy.filter(sameStudio => {
+        //   if (sameStudio === studio.name) {
+        //     return sameStudio
+        //   }
+        // }),
+
 userSchema
   .virtual('addedStudio', {
     ref: 'Studio',
