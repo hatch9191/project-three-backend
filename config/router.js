@@ -37,6 +37,7 @@ router.post('/login', auth.login)
 
 router.route('/profile')
   .get(secureRoute, auth.profileShow)
+  .put(secureRoute, auth.profileUpdate)
 
 router.route('/profile/:userId')
   .put(secureRoute, auth.profileUpdate)
