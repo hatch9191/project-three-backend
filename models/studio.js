@@ -29,7 +29,8 @@ const studioSchema = new mongoose.Schema({
   description: [{ type: String, required: true }],
   mainImage: { type: String, required: true },
   altImageOne: { type: String, require: false },
-  altImageTwo: { type: String, require: false },
+  altImageTwo: { type: String, require: false }, 
+  altImageThree: { type: String, require: false }, 
   location: {
     addressLineOne: { type: String, required: true },
     addressLineTwo: { type: String, required: false },
@@ -57,6 +58,10 @@ const studioSchema = new mongoose.Schema({
     image: { type: String, required: false },
   },
   previousClientsTwo: {
+    name: { type: String, required: false },
+    image: { type: String, required: false },
+  },
+  previousClientsThree: {
     name: { type: String, required: false },
     image: { type: String, required: false },
   },
