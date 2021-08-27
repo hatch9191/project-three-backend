@@ -40,4 +40,6 @@ async function seed() {
   disconnectDb()
 }
 
+'some change'
+
 seed()
