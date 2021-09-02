@@ -2,9 +2,3 @@
 
 * `npm install` - Install dependencies
 * `npm run dev` - Run the app in development mode
-CHRISTIAN
-EGGS
-Eoin Barr
-CHRISTIAN
-Eoin Barr
-CHRISTIAN
