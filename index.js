@@ -1,16 +1,6 @@
-import express from 'express'
-import logger from './lib/logger.js'
 import { connectDb } from './db/helpers.js'
 import { port } from './config/environment.js'
-import router from './config/router.js'
-import errorHandler from './lib/errorHandler.js'
-
-const app = express()
-
-app.use(express.json())
-app.use('/', logger)
-app.use('/api', router)
-app.use(errorHandler)
+import app from './app.js'
 
 async function startServer() {
   try {
