@@ -1,4 +1,3 @@
-### Project Three
+### GA Project Three - AirStudio
 
-* `npm install` - Install dependencies
-* `npm run dev` - Run the app in development mode
+Please find the full ReadMe for this project in the Frontend repo [HERE](https://github.com/hatch9191/project-three-frontend).
